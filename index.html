@@ -9,16 +9,19 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="top-nav">
-    <a href="#" class="nav-link logo">Site&nbsp;Title</a>
-    <nav id="site-nav" class="nav-wrap">
-      <a href="#" class="nav-link">News</a>
-      <a href="#" class="nav-link">About</a>
-      <a href="#" class="nav-link">Specials</a>
-      <a href="#" class="nav-link">Contact</a>
-    </nav>
-    <a href="#" class="nav-link" id="trigram" onclick="navToggle()"></a>
-  </header>
+  <div class="topnav">
+    <a href="#home" class="active">Logo</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
   <main>
     <section class="slideshow">
       <!--slider goes here-->
@@ -34,13 +37,13 @@
     </section>
     <section class="grid-cont">
       <article class="card">
-        <img src="photo1.jpg">
+        <img src="photo1.1.jpg">
         <h4>Heading for a bit</h4>
         <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
         <button onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
       </article><!--end article.card-->
       <article class="card">
-        <img src="photo2.jpg" alt="alt-text reads . . ."> 
+        <img src="photo4.jpg" alt="alt-text reads . . ."> 
         <h4>Heading for a bit</h4>
         <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
         <button onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
@@ -57,53 +60,6 @@
         <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
         <button onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
       </article><!--end article.card-->
-      <article class="card">
-         <img src="photo6.jpg" alt="alt-text reads . . ."> 
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-         <img src="photo7.jpg" alt="alt-text reads . . ."> 
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="photo8.jpg" alt="alt-text reads . . ."> 
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button>
-      </article>
-      <article class="card">
-        <img src="photo9.jpg" alt="alt-text reads . . ."> 
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button>
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="photo10.jpg" alt="alt-text reads . . ."> 
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button>
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="photo111.jpg" alt="alt-text reads . . ."> 
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button>
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="photo12.jpg" alt="alt-text reads . . ."> 
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button>
-      </article><!--end article.card-->
-      <article class="card">
-        <img src="photo13.jpg" alt="alt-text reads . . ."> 
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button>
       </article>
     </section>
   </main>
