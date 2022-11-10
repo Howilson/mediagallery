@@ -37,7 +37,7 @@ a:active {color: var(--dkmid);}
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: black;
+  background: rgb(89, 57, 7);
   display: block;
   position: absolute;
   right: 0;
@@ -52,62 +52,103 @@ a:active {color: var(--dkmid);}
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: #04AA6D;
+  background-color: #cd9d69;
   color: white;
 
 
 }
 main {
   padding: 1rem 2rem; /*-- adds inside space around the main content area --*/
+/* Slideshow container */
 }
-.slideshow { /*-- replace these styles with your slideshow styles --*/
-  display: flex; /*-- declares a flex container --*/
-  justify-content: center; /*-- center in the main axis --*/
-  align-items: center; /*-- center in the cross axis --*/
-  height: 55rem; /*-- fixed hieght, probably delete this --*/
-  border: 2px dashed var(--dkmid); /*-- unsubtle border --*/
-  border-radius: 8px; /*-- rounded corners --*/
-  background-color: var(--light); /*-- a bit of light background color --*/
-  color: var(--dkmid); /*-- text color is mid --*/
-  position: relative; /*-- allows explicit positioning for children --*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
-.controls button { /*-- you'll probably replace all .controls styles with your own --*/
-  cursor: pointer; /*-- changes hover cursor to the hand --*/
-  position: absolute; /*-- positions arrows absolutely--*/
-  width: auto; /*-- matches width of parent --*/
-  top: 40%; /*-- positions arrows from parent top --*/
-  color: var(--ltmid); /*-- arrow color --*/
-  background-color: transparent; /*-- hides button background --*/
-  border: none; /*-- removes default button border --*/
-  font-weight: 800; /*-- selects heavier font --*/
-  font-size: 8rem; /*-- sets arrow font size --*/
-  transition: 0.2s ease; /*-- sets transition speed for arrow hover--*/
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
-.controls button:hover {
-  color: var(--accent); /*-- changes button color on hover --*/
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
-.controls button:nth-child(1) {
-  left: 1rem; /*-- positions first arrow to the left --*/
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
-.controls button:nth-child(2) {
-  right: 1rem; /*-- positions second arrow to the right --*/
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
-.slideshow h2 { /*-- styles the placeholder text (probably safe to delete) --*/
-  font-size: 4rem; /*-- font is larger than normal --*/
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 .hero {
-  padding: 4rem 0; /*-- top and bottom padding for the container --*/
-  display: flex; /*-- declares a flex container --*/
-  flex-direction: column; /*-- direction downward --*/
-  justify-content: center; /*-- vertical center --*/
-  align-items: center; /*-- horizontal center --*/
-  background-color: var(--ltmid); /*-- light color --*/
-  width: 100vw; /*-- extra wide --*/
-  margin: 2rem 0 1rem -2rem; /*-- negative right margin compensates for extra width --*/
-}
-.hero > * { /*-- targets all direct children of .hero --*/
-  margin: 0; /*-- zeroes their margins --*/
-  padding: 0; /*-- zeroes their padding --*/
+
 }
 .grid-cont { /*-- styles the main grid container for media cards --*/
   padding: 2rem 0; /*-- top and bottom padding for the grid container --*/
