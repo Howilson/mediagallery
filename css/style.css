@@ -55,17 +55,18 @@ a:active {color: var(--dkmid);}
 .active {
   background-color: #cd9d69;
   color: white;
-
-
 }
+
 main {
   padding: 1rem 2rem; /*-- adds inside space around the main content area --*/
+  height: 600px;
 /* Slideshow container */
 }
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
+  align-items: center;
 }
 
 /* Hide the images by default */
@@ -128,7 +129,6 @@ main {
   display: table;
   clear: both;
 }
-
 /* Six columns side by side */
 .column {
   float: left;
@@ -192,6 +192,7 @@ footer { /*-- just some footer styles, nothing weird --*/
   justify-content: space-between; /*-- horizontal center --*/
   align-items: center; /*-- vertical center --*/
   background-color: #cd9d69;
+  position: relative; top: 600px;
 }
 footer p { /*-- targets the footer text --*/
   width: 100%; /*-- p elements are full width of the container --*/
