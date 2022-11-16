@@ -120,6 +120,7 @@ main {
   text-align: center;
   background-color: rgb(164, 127, 75);
   padding: 2px 16px;
+  height: 50px;
   color: white;
 }
 
@@ -181,18 +182,84 @@ main {
   margin: 2rem auto; /*-- centered it --*/
   padding: 1rem 2rem; /*-- makes space inside the button --*/
   cursor: pointer; /*-- changes the mouse cursor from arrow to pointer --*/
+  color: #251502;
+  background-color: #b39f85;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 120px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 }
 
 footer { /*-- just some footer styles, nothing weird --*/
-  margin-top: 2rem; /*-- adds space above --*/
+  margin-top: 5rem; /*-- adds space above --*/
   background-color: var(--ltmid); /*-- light mid color --*/
   padding: 1rem 2rem; /*-- inside space to match the nav --*/
   display: flex; /*-- might as well --*/
-  height: 6rem; /*-- fixed height  --*/
+  height: 4rem; /*-- fixed height  --*/
   justify-content: space-between; /*-- horizontal center --*/
   align-items: center; /*-- vertical center --*/
   background-color: #cd9d69;
-  position: relative; top: 600px;
+  position: fixed; 
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 footer p { /*-- targets the footer text --*/
   width: 100%; /*-- p elements are full width of the container --*/
